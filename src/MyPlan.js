@@ -35,7 +35,7 @@ const MyPlan = () => {
   }
 
     const filterEx = (category) => {
-      console.log(myPlanExercises);
+      // console.log(myPlanExercises);
       const loggedInAccount = JSON.parse(localStorage.getItem('loggedInAccount'));
       setMyPlanExercises(filterArray(category, getExercises(loggedInAccount)));
 }

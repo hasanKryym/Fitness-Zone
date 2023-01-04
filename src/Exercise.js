@@ -38,14 +38,14 @@ const Exercise = ({name, img, detailedImage, focusArea, id, equipment, preperati
   const handleRemoveExercise = (id) => {
     let loggedInAcc = JSON.parse(localStorage.getItem('loggedInAccount'));
     let oldExercises = loggedInAcc.exercises;
-    console.log(oldExercises);
+    // console.log(oldExercises);
     const exercises = oldExercises.filter((exercise) => {
       return exercise.id !== id;
     });
     loggedInAcc = {...loggedInAcc, exercises};
     localStorage.setItem('loggedInAccount', JSON.stringify(loggedInAcc));
-    window.location.reload();
     updateAccounts();
+    window.location.reload();
   }
   
   return (
